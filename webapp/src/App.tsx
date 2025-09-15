@@ -20,7 +20,7 @@ interface Task {
 function App() {
   const [currentPage, setCurrentPage] = useState<'login' | 'home' | 'browse' | 'create'>('login');
   const [user, setUser] = useState<User | null>(null);
-  const [tasks, setTasks] = useState<Task[]>([
+  const [tasks] = useState<Task[]>([
     {
       id: '1',
       title: 'Design a Logo',
