@@ -2,18 +2,17 @@
   "version": 2,
   "builds": [
     {
-      "src": "backend/src/server.ts",
-      "use": "@vercel/node"
+      "src": "webapp/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "webapp/build"
+      }
     }
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "/backend/src/server.ts"
-    },
-    {
       "src": "/(.*)",
-      "dest": "/backend/src/server.ts"
+      "dest": "/webapp/build/index.html"
     }
   ]
 }
