@@ -1,0 +1,10 @@
+{
+  "name": "talent-exchange",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "cd webapp && npm install && npm run build",
+    "start": "cd webapp && npm start"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}
